@@ -19,7 +19,7 @@ function nome(){
             window.alert("Por favor informe a sua data de aniversário para continuar");
         }
         else if($('.input-dia').attr('value') != "Dia" && n >= 2 || $('.input-mes').attr('value') != "Mês" && n >= 2 || $('.input-ano').attr('value') != "Ano" && n >= 2){
-            // window.alert("a");
+            window.alert("Agora começa a parte difícil");
         }
         
     }
