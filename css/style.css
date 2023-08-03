@@ -4,7 +4,6 @@
 
 body{
     background-image: url('../img/bg1.png');
-    background-repeat: no-repeat;
     background-size: cover;
     font-family: poppins;
 }
@@ -121,4 +120,38 @@ header{
     40%, 60% {
         transform: translateY(4px);
     }
+}
+
+#formulario .scrollable-menu{
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+#formulario .input-dropdown{
+    display: flex;
+    justify-content: space-around;
+}
+
+#formulario .input-dropdown input{
+    text-align: start;
+    color: black;
+    background-color: white;
+    padding: 16px 24px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 4px rgb(0 0 0/25%);
+    margin-left: 10px;
+}
+
+#formulario .input-dropdown .input-dia{
+    width: 127px;
+}
+
+#formulario .input-dropdown .input-mes{
+    width: 200px;
+}
+
+#formulario .input-dropdown .input-ano{
+    width: 127px;
 }
