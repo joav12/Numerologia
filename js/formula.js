@@ -112,10 +112,8 @@ function playAudio(){
 
     document.getElementById("audio_principal").play();
 
-    $('audio_principal')[0].textTracks[0].oncuechange = function() { 
-        var currentCue = this.activeCues[0].text;
-        $('#legendas').html(currentCue);
-    }
+    $('#player .pausar span').text("pause")
+
 }
 
 function mute(){
@@ -141,6 +139,15 @@ function pause(){
         document.getElementById("audio_principal").pause();
         
         $('#player .pausar span').text("play_arrow")
+
+        $('#black_bg').css('display', 'block');
+
+        $('#black_bg .result').text('')
+
+        $('#black_bg #name_black_bg').css('color', 'gold').css('font-size', '2.5rem')
+
+        $('#black_bg img').attr('src','img/stop.png')
+        $('#black_bg .paragrafo').text("Essa é a sua última chance de assistir até o final")
 
         ta_pausado = true
     }

@@ -172,6 +172,21 @@ header{
     margin-top: 15%;
 }
 
+#black_bg img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    animation: pisca 2s infinite;
+}
+
+@keyframes pisca{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
 #black_bg .paragrafo{
     margin: 0 auto;
     inline-size: 693px;
@@ -192,14 +207,11 @@ header{
 }
 
 @keyframes pequeno_grande{
-    0%{
+    0%, 100%{
         transform: scale(1.1, 1.1);
     }
     50%{
         transform: scale(1, 1);
-    }
-    100%{
-        transform: scale(1.1, 1.1);
     }
 }
 
