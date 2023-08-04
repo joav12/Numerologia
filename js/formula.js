@@ -1,3 +1,5 @@
+var mes_list = ["Janeiro", "Fevereiro", "Março","Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro" , "Outubro", "Novembro", "Dezembro"];
+
 var n = 0;
 
 function nome(){
@@ -19,7 +21,72 @@ function nome(){
             window.alert("Por favor informe a sua data de aniversário para continuar");
         }
         else if($('.input-dia').attr('value') != "Dia" && n >= 2 || $('.input-mes').attr('value') != "Mês" && n >= 2 || $('.input-ano').attr('value') != "Ano" && n >= 2){
-            window.alert("Agora começa a parte difícil");
+            var mes = "", output = [], soma = 0;
+
+            for(i=0;i<mes_list.length;i++){
+                if($('.input-mes').attr('value') == mes_list[i]){
+                    mes = `${i + 1}`;
+                }
+            }
+
+            var nasc = $('.input-dia').attr('value') + mes + $('.input-ano').attr('value')
+            
+            for (var i = 0, len = nasc.length; i < len; i += 1) {
+                output.push(+nasc.charAt(i));
+            }
+            
+            for (let i = 0; i < output.length; i++ ) {
+                soma += output[i];
+            }
+            
+            output = [];
+            soma = soma.toString();
+            for (var i = 0, len = soma.length; i < len; i += 1) {
+                output.push(+soma.charAt(i));
+            }
+
+            soma = 0;
+            if(output[0] == output[1]){
+                soma = output[0];
+            }
+            else{
+                for (let i = 0; i < output.length; i++ ) {
+                    soma += output[i];
+                }  
+            }
+            
+            if(soma >= 10){
+                output = [];
+                soma = soma.toString();
+                for (var i = 0, len = soma.length; i < len; i += 1) {
+                    output.push(+soma.charAt(i));
+                }
+
+                soma = 0;
+                if(output[0] == output[1]){
+                    soma = output[0];
+                }
+                else{
+                    for (let i = 0; i < output.length; i++ ) {
+                        soma += output[i];
+                    }  
+                }
+
+                soma = "0" + soma;
+            }
+            else{
+                soma = "0" + soma;
+            }
+            
+            $('#audio_principal').attr('src', `media/numeroDestino/${soma}.mp3`)
+            $('#player .legends track').attr('src', `legendas/numeroDestino/${soma}.vtt`)
+
+            $('#container1').css('display', 'none');
+            $('#black_bg').css('display', 'block');
+            $('#container2').css('display', 'block');
+
+            $('#name_black_bg').text(name_user);
+
         }
         
     }
@@ -35,4 +102,54 @@ function add_mes(butao){
 
 function add_ano(butao){
     $('.input-ano').attr('value', $(butao).text());
+}
+
+function playAudio(){
+    $('#black_bg').css('display', 'none');
+
+    document.getElementById("audio_fundo").loop = true;
+    document.getElementById("audio_fundo").play();
+
+    document.getElementById("audio_principal").play();
+
+    $('audio_principal')[0].textTracks[0].oncuechange = function() { 
+        var currentCue = this.activeCues[0].text;
+        $('#legendas').html(currentCue);
+    }
+}
+
+function mute(){
+    if(document.getElementById("audio_fundo").muted != true && document.getElementById("audio_principal").muted != true){
+        document.getElementById("audio_fundo").muted = true;
+        document.getElementById("audio_principal").muted = true;
+        
+        $('#player .mutar span').text("volume_off")
+    }
+    else{
+        document.getElementById("audio_fundo").muted = false;
+
+        document.getElementById("audio_principal").muted = false;  
+
+        $('#player .mutar span').text("volume_up")
+    }
+}
+
+var ta_pausado = false;
+
+function pause(){
+    if(ta_pausado == false){
+        document.getElementById("audio_principal").pause();
+        
+        $('#player .pausar span').text("play_arrow")
+
+        ta_pausado = true
+    }
+    else if(ta_pausado == true){
+        document.getElementById("audio_principal").play();  
+
+        $('#player .pausar span').text("pause")
+
+        ta_pausado = false
+    }
+    
 }

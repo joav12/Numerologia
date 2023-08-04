@@ -8,7 +8,8 @@ body{
     font-family: poppins;
 }
 
-#container{
+/* Primeira parte */
+#container1{
     max-width: 900px;
     margin: 0 auto;
 }
@@ -154,4 +155,78 @@ header{
 
 #formulario .input-dropdown .input-ano{
     width: 127px;
+}
+
+/* Segunda parte */
+/* Fundo escuro */
+#black_bg{
+    position: absolute;
+    background-color: #000000a3;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+}
+
+#black_bg .meio{
+    margin-top: 15%;
+}
+
+#black_bg .paragrafo{
+    margin: 0 auto;
+    inline-size: 693px;
+    overflow-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+#black_bg button{
+    border: none;
+    background: #ff2b2b;
+    height: 50px;
+    width: 313px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transform: scale(1,1);
+    animation: pequeno_grande 2s ease infinite;
+}
+
+@keyframes pequeno_grande{
+    0%{
+        transform: scale(1.1, 1.1);
+    }
+    50%{
+        transform: scale(1, 1);
+    }
+    100%{
+        transform: scale(1.1, 1.1);
+    }
+}
+
+#container2{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Animação */
+#animation_canvas{
+    width: 100%;
+    border: 1px solid gold;
+    height: 490px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Player */
+#player{
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    background: #1a3254;
+    height: 100px;
+    border-radius: 35px;
+}
+
+#player a:hover{
+    cursor: pointer;
 }
