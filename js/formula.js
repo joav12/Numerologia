@@ -2,6 +2,24 @@ var mes_list = ["Janeiro", "Fevereiro", "Março","Abril", "Maio", "Junho", "Julh
 
 var n = 0;
 
+// console.log($.get('../legendas/numeroDestino/01.vtt'))
+
+$.get('../legendas/numeroDestino/01.vtt', function(data) {
+     
+     // Read all captions into an array
+     var items = data.split('\n\r\n');
+     
+     console.log(items);
+    
+     //Loop through all captions
+     $.each(items, function( index, value ) {
+      
+      var item = items[index].split('\n');
+      console.log(item);    
+
+      });
+ });
+
 function nome(){
     if(document.getElementById("name_user").value == ""){
         window.alert("Preencha com o seu nome");
