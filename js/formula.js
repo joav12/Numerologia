@@ -122,6 +122,7 @@ function playAudio(){
 
     const audio = document.getElementById('audio_principal');
 
+    var numero_legal = 0;
     audio.addEventListener('timeupdate', function exibirLegendas(){
     const tempoAtual = audio.currentTime;
     const faixasDeLegendas = audio.textTracks[0].cues;
@@ -131,14 +132,15 @@ function playAudio(){
         if (tempoAtual >= legenda.startTime && tempoAtual < legenda.endTime) {
             if(document.getElementById('nome_legenda') !== null){
                 $('#nome_legenda').text($('#nome_do_cliente').text())
+                $('#data_legenda').text($('#aniversário_do_cliente').text())
+                numero_legal++
             }
 
             console.log(numero_legal)
             
-            if(legendasContainer.innerHTML !== legenda.text){
+            if(legendasContainer.innerHTML !== legenda.text && numero_legal == 0 || legendasContainer.innerHTML !== legenda.text && numero_legal == 7){
                 legendasContainer.innerHTML = legenda.text
-            }
-            
+            }            
         }
     }
 });
