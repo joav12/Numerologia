@@ -2,23 +2,7 @@ var mes_list = ["Janeiro", "Fevereiro", "Março","Abril", "Maio", "Junho", "Julh
 
 var n = 0;
 
-// console.log($.get('../legendas/numeroDestino/01.vtt'))
-
-$.get('../legendas/numeroDestino/01.vtt', function(data) {
-     
-     // Read all captions into an array
-     var items = data.split('\n\r\n');
-     
-     console.log(items);
-    
-     //Loop through all captions
-     $.each(items, function( index, value ) {
-      
-      var item = items[index].split('\n');
-      console.log(item);    
-
-      });
- });
+const legendasContainer = document.getElementById('legendas_aparecendo');
 
 function nome(){
     if(document.getElementById("name_user").value == ""){
@@ -97,7 +81,11 @@ function nome(){
             }
             
             $('#audio_principal').attr('src', `media/numeroDestino/${soma}.mp3`)
-            $('#player .legends track').attr('src', `legendas/numeroDestino/${soma}.vtt`)
+            // $('#audio_principal').attr('src', `media/numeroDestino/${soma}.mp3`)
+            $('#audio_principal track').attr('src', `legendas/numeroDestino/${soma}.vtt`)
+
+            $('#nome_do_cliente').text(name_user)
+            $('#aniversário_do_cliente').text(`${$('.input-dia').attr('value')}/${$('.input-mes').attr('value')}/${$('.input-ano').attr('value')}`)
 
             $('#container1').css('display', 'none');
             $('#black_bg').css('display', 'block');
@@ -131,6 +119,29 @@ function playAudio(){
     document.getElementById("audio_principal").play();
 
     $('#player .pausar span').text("pause")
+
+    const audio = document.getElementById('audio_principal');
+
+    audio.addEventListener('timeupdate', function exibirLegendas(){
+    const tempoAtual = audio.currentTime;
+    const faixasDeLegendas = audio.textTracks[0].cues;
+
+    for (let i = 0; i < faixasDeLegendas.length; i++) {
+        const legenda = faixasDeLegendas[i];
+        if (tempoAtual >= legenda.startTime && tempoAtual < legenda.endTime) {
+            if(document.getElementById('nome_legenda') !== null){
+                $('#nome_legenda').text($('#nome_do_cliente').text())
+            }
+
+            console.log(numero_legal)
+            
+            if(legendasContainer.innerHTML !== legenda.text){
+                legendasContainer.innerHTML = legenda.text
+            }
+            
+        }
+    }
+});
 
 }
 

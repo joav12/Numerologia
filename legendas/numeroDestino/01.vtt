@@ -14,7 +14,7 @@ Nos próximos minutos, você receberá uma análise
 profundamente reveladora com base...
 
 00:00:11.685 --> 00:00:13.500
-no seu nome ([nome]) e data de nascimento ([data-nascimento]).
+no seu nome (<span id="nome_legenda">Nome</span>) e data de nascimento ([data-nascimento]).
 
 00:00:13.500 --> 00:00:20.040
 A numerologia é a ponte entre
