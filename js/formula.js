@@ -81,11 +81,11 @@ function nome(){
             }
             
             $('#audio_principal').attr('src', `media/numeroDestino/${soma}.mp3`)
-            // $('#audio_principal').attr('src', `media/numeroDestino/${soma}.mp3`)
             $('#audio_principal track').attr('src', `legendas/numeroDestino/${soma}.vtt`)
 
             $('#nome_do_cliente').text(name_user)
             $('#aniversário_do_cliente').text(`${$('.input-dia').attr('value')}/${$('.input-mes').attr('value')}/${$('.input-ano').attr('value')}`)
+            $('#numero_do_cliente').text(soma);
 
             $('#container1').css('display', 'none');
             $('#black_bg').css('display', 'block');
@@ -135,8 +135,6 @@ function playAudio(){
                 $('#data_legenda').text($('#aniversário_do_cliente').text())
                 numero_legal++
             }
-
-            console.log(numero_legal)
             
             if(legendasContainer.innerHTML !== legenda.text && numero_legal == 0 || legendasContainer.innerHTML !== legenda.text && numero_legal == 7){
                 legendasContainer.innerHTML = legenda.text
@@ -144,6 +142,8 @@ function playAudio(){
         }
     }
 });
+
+animation1();
 
 }
 
