@@ -93,6 +93,9 @@ function nome(){
 
             $('#name_black_bg').text(name_user);
 
+            $('#nome_user_anima').text(name_user)
+            $('#niver_user_anima').text($('#aniversário_do_cliente').text())
+
         }
         
     }
@@ -144,6 +147,7 @@ function playAudio(){
 });
 
 animation1();
+
 
 }
 

@@ -229,6 +229,25 @@ header{
     margin-bottom: 50px;
 }
 
+#primeira_anima{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#paragrafo1_animate, #paragrafo2_animate{
+    position: relative;
+}
+
+#paragrafo1_animate{
+    left: 34px;
+}
+
+#paragrafo2_animate{
+    top: -34px;
+    left: 528px;
+}
+
 /* Player e legendas */
 #player{
     margin: 0 auto;
