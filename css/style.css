@@ -2,6 +2,10 @@
     color: white;
 }
 
+html{
+    overflow: hidden;
+}
+
 body{
     background-image: url('../img/bg1.png');
     background-size: auto;
@@ -233,23 +237,48 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
 }
 
-#paragrafo1_animate, #paragrafo2_animate{
+#paragrafo1_animate_sep, #paragrafo2_animate_sep{
     position: relative;
 }
 
-#paragrafo1_animate{
+#paragrafos_animate{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    top: -383px;
+}
+
+#paragrafo1_animate_sep{
     left: 34px;
 }
 
-#paragrafo2_animate{
+#paragrafo2_animate_sep{
     top: -34px;
     left: 528px;
 }
 
+#numeros_cards_anima{
+    display: flex;
+    position: relative;
+    top: -297px;
+    left: 62px;
+}
+
+#numeros_cards_anima img{
+    width: 125px;
+    height: 206px;
+    margin-right: 30px;
+    opacity: 0;
+}
+
 /* Player e legendas */
 #player{
+    position: relative;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -257,6 +286,7 @@ header{
     background: #1a3254;
     height: 100px;
     border-radius: 35px;
+    top: -200px;
 }
 
 .legends{

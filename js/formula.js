@@ -119,6 +119,7 @@ function playAudio(){
     document.getElementById("audio_fundo").loop = true;
     document.getElementById("audio_fundo").play();
 
+    document.getElementById("audio_principal").loop = false;
     document.getElementById("audio_principal").play();
 
     $('#player .pausar span').text("pause")
