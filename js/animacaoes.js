@@ -5,7 +5,6 @@ function animation1(){
     audio.addEventListener('timeupdate', function exibirLegendas(){
     const tempoAtual = audio.currentTime;
 
-    console.log(tempoAtual)
         if(tempoAtual >= 0.0 && tempoAtual <= 0.5){
             $('#primeira_anima').animate({
                 opacity: '1'
@@ -235,12 +234,14 @@ function animation1(){
         }
 
         if(tempoAtual >= 209.0 && tempoAtual <= 209.5){
+            $('#primeira_anima img').attr('src', 'img/tabela.png')
+            $('#primeira_anima h3').css('color', 'rgba(255, 217, 0, 0)')
+            
             $('#primeira_anima').animate({
                 opacity: '1'
             }, 500)
 
-            $('#primeira_anima h3').css('color', 'rgba(255, 217, 0, 0)')
-            $('#primeira_anima img').attr('src', 'img/tabela.png')
+            
         }
 
         if(tempoAtual >= 247.0 && tempoAtual <= 247.5){
