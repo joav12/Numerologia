@@ -27,7 +27,11 @@ function nome(){
 
             for(i=0;i<mes_list.length;i++){
                 if($('.input-mes').attr('value') == mes_list[i]){
-                    mes = `${i + 1}`;
+                    if((i + 1) <  10){
+                        mes = `0${i + 1}`;
+                    }else{
+                        mes = `${i + 1}`;
+                    }
                 }
             }
 
@@ -94,7 +98,21 @@ function nome(){
             $('#name_black_bg').text(name_user);
 
             $('#nome_user_anima').text(name_user)
-            $('#niver_user_anima').text($('#aniversário_do_cliente').text())
+            $('#niver_user_anima').text($('#aniversário_do_cliente').text());
+
+            output = []
+            for (var i = 0, len = nasc.length; i < len; i += 1) {
+                output.push(+nasc.charAt(i));
+            }
+
+            $('.dia1').text(output[0]);
+            $('.dia2').text(output[1]);
+            $('.mes1').text(output[2]);
+            $('.mes2').text(output[3]);
+            $('.ano1').text(output[4]);
+            $('.ano2').text(output[5]);
+            $('.ano3').text(output[6]);
+            $('.ano4').text(output[7]);
 
         }
         

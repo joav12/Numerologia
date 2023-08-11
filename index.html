@@ -56,10 +56,20 @@
 
         <!-- FORMULÁRIO -->
         <div id="formulario">
-            <p>Digite seus dados abaixo para receber sua Análise de Numerologia (100% gratuita)</p>
+            <p class="title-form">Digite seus dados abaixo para receber sua Análise de Numerologia (100% gratuita)</p>
+
+            <div class="input 2_cour_gender" style="display: none;">
+                <p>Informe o seu genero</p>
+                <input type="text" name="gender_user" id="gender_user" placeholder="Digite genero">
+            </div>
+
+            <div class="input 2_cour_full_name" style="display: none;">
+                <p>Informe o seu nome complero</p>
+                <input type="text" name="full_name_user" id="full_name_user" placeholder="Digite seu nome completo">
+            </div>
 
             <div class="input">
-                <p>Informe o seu primeiro nome</p>
+                <p class="input-p">Informe o seu primeiro nome</p>
                 <input type="text" name="name_user" id="name_user" placeholder="Digite seu primeiro nome">
             </div>
         
@@ -68,23 +78,23 @@
                     <input type="text" class="btn btn-secondary dropdown-toggle input-dia" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" value="Dia" readonly>
 
                     <ul class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" onclick="add_dia(this)">1</a></li>
+                    <li><a class="dropdown-item" onclick="add_dia(this)">01</a></li>
 
-                      <li><a class="dropdown-item" onclick="add_dia(this)">2</a></li>
+                      <li><a class="dropdown-item" onclick="add_dia(this)">02</a></li>
 
-                      <li><a class="dropdown-item" onclick="add_dia(this)">3</a></li>
+                      <li><a class="dropdown-item" onclick="add_dia(this)">03</a></li>
 
-                      <li><a class="dropdown-item" onclick="add_dia(this)">4</a></li>
+                      <li><a class="dropdown-item" onclick="add_dia(this)">04</a></li>
 
-                      <li><a class="dropdown-item" onclick="add_dia(this)">5</a></li>
+                      <li><a class="dropdown-item" onclick="add_dia(this)">05</a></li>
 
-                      <li><a class="dropdown-item" onclick="add_dia(this)">6</a></li>
+                      <li><a class="dropdown-item" onclick="add_dia(this)">06</a></li>
 
-                      <li><a class="dropdown-item" onclick="add_dia(this)">7</a></li>
+                      <li><a class="dropdown-item" onclick="add_dia(this)">07</a></li>
 
-                      <li><a class="dropdown-item" onclick="add_dia(this)">8</a></li>
+                      <li><a class="dropdown-item" onclick="add_dia(this)">08</a></li>
 
-                      <li><a class="dropdown-item" onclick="add_dia(this)">9</a></li>
+                      <li><a class="dropdown-item" onclick="add_dia(this)">09</a></li>
 
                       <li><a class="dropdown-item" onclick="add_dia(this)">10</a></li>
 
@@ -319,6 +329,38 @@
             <h3 id="paragrafo3_animate" style="opacity: 0;">"Como os outros percebem você?"</h3>
             <h3 id="paragrafo4_animate" style="opacity: 0;">"Como atrair abundância?"</h3>
             <h3 id="paragrafo5_animate" style="opacity: 0;">"Quais oportunidades o futuro te reserva?"</h3>
+        </div>
+
+        <div id="num_dest_anima">
+            <h3>Numero do destino</h3>
+
+            <img src="img/card-numero-destino.png" alt="Numero do destino">
+        </div>
+
+        <div id="calcula_num_dest_anima">
+            <h3>calculando o seu numero do destino</h3>
+
+            <div class="calcula_num_dest_anima_flex">
+                <div id="dia_calcula_card">
+                    <p class="dia1"></p>
+                    <p class="dia2"></p>
+                </div>
+
+                <div id="mes_calcula_card">
+                    <p class="mes1"></p>
+                    <p class="mes2"></p>
+                </div>
+
+                <div id="ano1_calcula_card">
+                    <p class="ano1"></p>
+                    <p class="ano2"></p>
+                </div>
+
+                <div id="ano2_calcula_card">
+                    <p class="ano3"></p>
+                    <p class="ano4"></p>
+                </div>
+            </div>
         </div>
 
         <!-- Player -->
