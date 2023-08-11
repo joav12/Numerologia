@@ -5,7 +5,6 @@ function animation1(){
     audio.addEventListener('timeupdate', function exibirLegendas(){
     const tempoAtual = audio.currentTime;
 
-    console.log(tempoAtual)
         if(tempoAtual >= 0.0 && tempoAtual <= 0.5){
             $('#primeira_anima').animate({
                 opacity: '1'
