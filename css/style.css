@@ -29,7 +29,7 @@ header{
 }
 
 #logo img{
-    max-width: 140px;
+    max-width: 200px;
 }
 
 /*APRESENTAÇÃO*/
@@ -147,6 +147,16 @@ header{
     border: none;
     box-shadow: 0 4px 4px rgb(0 0 0/25%);
     margin-left: 10px;
+}
+
+.cour_dois_gender .input-gender, .cour_tres_estadoCivil .input-estado-civil{
+    text-align: start;
+    color: black;
+    background-color: white;
+    padding: 16px 24px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 4px rgb(0 0 0/25%);
 }
 
 #formulario .input-dropdown .input-dia{
@@ -329,6 +339,25 @@ header{
     margin-left: 50px;
 }
 
+#nome_completo_anima, #nome_completo_number_anima{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -1209px;
+    opacity: 0;
+}
+
+#nome_completo_anima h5, #nome_completo_number_anima h5{
+    padding: 10px;
+    background-color: #1a3254;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#nome_completo_number_anima h5{
+    background-color: gold;
+}
+
 /* Player e legendas */
 #player{
     position: relative;
@@ -339,7 +368,7 @@ header{
     background: #1a3254;
     height: 100px;
     border-radius: 35px;
-    top: -808px;
+    top: -852px;
 }
 
 .legends{

@@ -4,11 +4,10 @@ var n = 0;
 
 const legendasContainer = document.getElementById('legendas_aparecendo');
 
-function nome(){
+function cour_um(){
     if(document.getElementById("name_user").value == ""){
         window.alert("Preencha com o seu nome");
     }
-
     else{
         n += 1;
         const name_user = document.getElementById("name_user").value;
@@ -113,9 +112,120 @@ function nome(){
             $('.ano2').text(output[5]);
             $('.ano3').text(output[6]);
             $('.ano4').text(output[7]);
-
         }
         
+    }
+}
+
+function cour_dois(){
+    if(document.getElementById("full_name_user").value == "" || $('.input-gender').attr('value') == "Seu gênero"){
+        window.alert("Preencha todos os campos abaixo");
+    }
+    else{
+        const full_name = document.getElementById("full_name_user").value.toLowerCase().split('');
+
+        var full_name_number = [];
+        for(i=0, nam=full_name.length; i<nam; i++){
+            if(full_name[i] == "a" || full_name[i] == "j" || full_name[i] == "s" || full_name[i] == "ã"){
+                full_name_number.push(1);
+            }
+            else if(full_name[i] == "b" || full_name[i] == "k" || full_name[i] == "t"){
+                full_name_number.push(2);
+            }
+            else if(full_name[i] == "c" || full_name[i] == "l" || full_name[i] == "u" || full_name[i] == "ç"){
+                full_name_number.push(3);
+            }
+            else if(full_name[i] == "d" || full_name[i] == "m" || full_name[i] == "v"){
+                full_name_number.push(4);
+            }
+            else if(full_name[i] == "e" || full_name[i] == "n" || full_name[i] == "w"){
+                full_name_number.push(5);
+            }
+            else if(full_name[i] == "f" || full_name[i] == "o" || full_name[i] == "x"){
+                full_name_number.push(6);
+            }
+            else if(full_name[i] == "g" || full_name[i] == "p" || full_name[i] == "y"){
+                full_name_number.push(7);
+            }
+            else if(full_name[i] == "h" || full_name[i] == "q" || full_name[i] == "z"){
+                full_name_number.push(8);
+            }
+            else if(full_name[i] == "i" || full_name[i] == "r"){
+                full_name_number.push(9);
+            }
+            else if(full_name[i] == " "){
+                full_name_number.push(0)
+            }
+        }
+
+        var soma = 0;
+
+        for(i=0, nam=full_name_number.length; i<nam; i++){
+            soma += full_name_number[i];
+        }
+
+        function sominha(soma){
+            if(soma > 9){
+                var myArr = String(soma).split("").map((soma)=>{
+                    return Number(soma)
+                  })
+    
+                var soma2 = 0
+                for(i=0, nam=myArr.length; i<nam; i++){
+                    soma2 += myArr[i];
+                }
+    
+                soma = soma2
+                if(soma > 9){
+                    return sominha(soma);
+                }
+                else{
+                    soma = `0${soma}`
+
+                    return soma
+                }
+            }
+
+        }
+
+        for(i=0, nam=full_name.length; i<nam;i++){
+            if(i == 0 || full_name[i - 1] !== 'undefined' && full_name[i - 1] == " "){
+                document.getElementById('nome_completo_anima').innerHTML += `<h5>${full_name[i].toUpperCase()}</h5>`
+            }
+            else{
+                if(full_name[i] == " "){
+                    document.getElementById('nome_completo_anima').innerHTML += `<h5 style="background-color: transparent"> </h5>`
+                }
+                else{
+                  document.getElementById('nome_completo_anima').innerHTML += `<h5>${full_name[i]}</h5>`   
+                }
+            }
+        }
+
+        for(i=0, nam=full_name_number.length; i<nam;i++){
+            if(full_name_number[i] == 0){
+                document.getElementById('nome_completo_number_anima').innerHTML += `<h5 style="background-color: transparent"> </h5>`
+            }
+            else{
+                document.getElementById('nome_completo_number_anima').innerHTML += `<h5>${full_name_number[i]}</h5>`  
+            }
+            
+        }
+
+        $('#audio_principal').attr('src', `media/numeroExprecao/${sominha(soma)}.mp3`)
+        $('#audio_principal track').attr('src', `legendas/numeroExprecao/${sominha(soma)}.vtt`)
+
+        $('#nome_do_cliente').text(document.getElementById("full_name_user").value)
+        $('#genero_do_cliente').text($('.input-gender').attr('value'))
+        $('#numeroExp_do_cliente').text(sominha(soma));
+
+        $('#container1').css('display', 'none');
+        $('#black_bg').css('display', 'block');
+        $('#container2').css('display', 'block');
+
+        $('#name_black_bg').text(document.getElementById("full_name_user").value);
+
+        $('#legendas_aparecendo').text('Olá, novamente')
     }
 }
 
@@ -131,13 +241,24 @@ function add_ano(butao){
     $('.input-ano').attr('value', $(butao).text());
 }
 
+function add_genero(butao){
+    $('.input-gender').attr('value', $(butao).text());
+}
+
+function add_estado_civil(butao){
+    $('.input-estado-civil').attr('value', $(butao).text());
+}
+
+var indica_cour_number = 0;
 function playAudio(){
     $('#black_bg').css('display', 'none');
 
     document.getElementById("audio_fundo").loop = true;
+    document.getElementById("audio_fundo").volume = 0.2;
     document.getElementById("audio_fundo").play();
 
     document.getElementById("audio_principal").loop = false;
+    document.getElementById("audio_principal").volume = 0.5;
     document.getElementById("audio_principal").play();
 
     $('#player .pausar span').text("pause")
@@ -146,27 +267,36 @@ function playAudio(){
 
     var numero_legal = 0;
     audio.addEventListener('timeupdate', function exibirLegendas(){
-    const tempoAtual = audio.currentTime;
-    const faixasDeLegendas = audio.textTracks[0].cues;
+        const tempoAtual = audio.currentTime;
+        const faixasDeLegendas = audio.textTracks[0].cues;
 
-    for (let i = 0; i < faixasDeLegendas.length; i++) {
-        const legenda = faixasDeLegendas[i];
-        if (tempoAtual >= legenda.startTime && tempoAtual < legenda.endTime) {
-            if(document.getElementById('nome_legenda') !== null){
-                $('#nome_legenda').text($('#nome_do_cliente').text())
-                $('#data_legenda').text($('#aniversário_do_cliente').text())
-                numero_legal++
+        for (let i = 0; i < faixasDeLegendas.length; i++) {
+            const legenda = faixasDeLegendas[i];
+            if (tempoAtual >= legenda.startTime && tempoAtual < legenda.endTime) {
+                if(document.getElementById('nome_legenda') !== null){
+                    $('#nome_legenda').text($('#nome_do_cliente').text())
+                    $('#data_legenda').text($('#aniversário_do_cliente').text())
+                    numero_legal++
+                }
+                
+                if(legendasContainer.innerHTML !== legenda.text && numero_legal == 0 || legendasContainer.innerHTML !== legenda.text && numero_legal == 7){
+                    legendasContainer.innerHTML = legenda.text
+                }            
             }
-            
-            if(legendasContainer.innerHTML !== legenda.text && numero_legal == 0 || legendasContainer.innerHTML !== legenda.text && numero_legal == 7){
-                legendasContainer.innerHTML = legenda.text
-            }            
         }
+    });
+
+    if(indica_cour_number == 0){
+        indica_cour_number += 1;
+        return animation1();
     }
-});
-
-animation1();
-
+    else if(indica_cour_number == 1){
+        indica_cour_number += 1;
+        return animation2();
+    }
+    else if(indica_cour_number == 2){
+        return animation3();
+    }
 
 }
 

@@ -23,6 +23,10 @@
     <p id="nome_do_cliente" style="display: none;"></p>
     <p id="aniversário_do_cliente" style="display: none;"></p>
     <p id="numero_do_cliente" style="display: none;"></p>
+    <p id="genero_do_clinte" style="display: none;"></p>
+    <p id="numeroExp_do_cliente" style="display: none;"></p>
+    <p id="email_do_cliente" style="display: none;"></p>
+    <p id="estadoCivil_do_cliente" style="display: none;"></p>
     
     <div id="black_bg" style="display: none;">
         <div class="meio">
@@ -58,13 +62,47 @@
         <div id="formulario">
             <p class="title-form">Digite seus dados abaixo para receber sua Análise de Numerologia (100% gratuita)</p>
 
-            <div class="input 2_cour_gender" style="display: none;">
-                <p>Informe o seu genero</p>
-                <input type="text" name="gender_user" id="gender_user" placeholder="Digite genero">
+            <!-- Voltar ao normal despois do teste -->
+
+            <div class="input cour_tres_estadoCivil" style="display: none;">
+                <p>Informe o seu estado civil</p>
+                <div class="dropdown">
+                    <input type="text" class="btn btn-secondary dropdown-toggle input-estado-civil" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" value="Seu estado civil" readonly>
+
+                    <ul class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" onclick="add_estado_civil(this)">Casado(a)</a></li>
+
+                        <li><a class="dropdown-item" onclick="add_estado_civil(this)">Solteiro(a)</a></li>
+
+                        <li><a class="dropdown-item" onclick="add_estado_civil(this)">viuvo(a)</a></li>
+
+                        <li><a class="dropdown-item" onclick="add_estado_civil(this)">separado(a)</a></li>
+
+                        <li><a class="dropdown-item" onclick="add_estado_civil(this)">divrociado(a)</a></li>
+                      </ul>
+                </div>
             </div>
 
-            <div class="input 2_cour_full_name" style="display: none;">
-                <p>Informe o seu nome complero</p>
+            <div class="input cour_tres_email" style="display: none;">
+                <p>Informe o seu email</p>
+                <input type="email" name="email_user" id="email_user" placeholder="Digite seu email">
+            </div>
+
+            <div class="input cour_dois_gender" style="display: none;">
+                <p>Informe o seu genero</p>
+                <div class="dropdown">
+                    <input type="text" class="btn btn-secondary dropdown-toggle input-gender" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" value="Seu gênero" readonly>
+
+                    <ul class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" onclick="add_genero(this)">Masculino</a></li>
+
+                        <li><a class="dropdown-item" onclick="add_genero(this)">Feminino</a></li>
+                      </ul>
+                </div>
+            </div>
+
+            <div class="input cour_dois_full_name" style="display: none;">
+                <p>Informe o seu nome completo</p>
                 <input type="text" name="full_name_user" id="full_name_user" placeholder="Digite seu nome completo">
             </div>
 
@@ -289,7 +327,7 @@
             </div>
 
             <div class="butao">
-                <button onclick="nome()" >Clique aqui para continuar</button>
+                <button onclick="cour_um()" >Clique aqui para continuar</button>
             </div>
         </div>
     </div>
@@ -363,10 +401,13 @@
             </div>
         </div>
 
+        <div id="nome_completo_anima"></div>
+        <div id="nome_completo_number_anima"></div>
+
         <!-- Player -->
         <div id="player">
             <div class="legends">
-                <h3 default id="legendas_aparecendo">Seja bem-vindo.</h3>
+                <h3 default id="legendas_aparecendo">Seja bem-vindo</h3>
             </div>
 
             <div class="divider_bunito"></div>
