@@ -356,6 +356,8 @@ function animation2(){
                 $('#container1').css('display', 'block');
                 $('#container2').css('display', 'none');
 
+                $('.cour_dois_gender').css('display', 'none');
+                $('.cour_dois_full_name').css('display', 'none');
                 $('.cour_tres_estadoCivil').css('display', 'block');
                 $('.cour_tres_email').css('display', 'block');
 
