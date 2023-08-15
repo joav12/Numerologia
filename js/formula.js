@@ -229,6 +229,132 @@ function cour_dois(){
     }
 }
 
+function cour_tres(){
+    if(document.getElementById("email_user").value == "" || $('.input-estado-civil').attr('value') == "Seu estado civil"){
+        window.alert("Preencha todos os campos abaixo");
+    }
+    else{
+        if(document.getElementById("email_user").value.includes('@')){
+            const full_name = $('#nome_do_cliente').text().toLowerCase().split('');
+
+            var full_name_number = [];
+            for(i=0,nam=full_name.length; i<nam;i++){
+                if(full_name[i] == 'a' || full_name[i] == 'ã'){
+                    full_name_number.push(1)
+                }
+                else if(full_name[i] == 'u'){
+                    full_name_number.push(3)
+                }
+                else if(full_name[i] == 'e'){
+                    full_name_number.push(5)
+                }
+                else if(full_name[i] == 'o'){
+                    full_name_number.push(6)
+                }
+                else if(full_name[i] == 'i'){
+                    full_name_number.push(9)
+                }
+                else if(full_name[i] == 'u'){
+                    full_name_number.push(3)
+                }
+                else if(full_name[i] != 'a' || full_name[i] != 'ã' || full_name[i] != 'e' || full_name[i] != 'i' || full_name[i] != 'o' || full_name[i] != 'u'){
+                    if(full_name[i] == " "){
+                        full_name_number.push("espaço")
+                    }
+                    else{
+                        full_name_number.push(0);
+                    }
+                    
+                }
+            }
+
+            for(i=0, nam=full_name.length; i<nam;i++){
+                if(i == 0 || full_name[i - 1] !== 'undefined' && full_name[i - 1] == " "){
+                    document.getElementById('nome_completo_anima').innerHTML += `<h5 style="background-color: #0e1b2c; color: rgb(152 152 152);"">${full_name[i].toUpperCase()}</h5>`
+                }
+                else{
+                    if(full_name[i] == " "){
+                        document.getElementById('nome_completo_anima').innerHTML += `<h5 style="background-color: transparent"> </h5>`
+                    }
+                    else{
+                        if(full_name[i] == 'a' || full_name[i] == 'ã' || full_name[i] == 'e' || full_name[i] == 'i' || full_name[i] == 'o' || full_name[i] == 'u'){
+                            document.getElementById('nome_completo_anima').innerHTML += `<h5>${full_name[i]}</h5>`  
+                        }
+                        else{                    
+                            document.getElementById('nome_completo_anima').innerHTML += `<h5 style="background-color: #0e1b2c; color: rgb(152 152 152);">${full_name[i]}</h5>`   
+                        }
+                      
+                    }
+                }
+            }
+
+            var soma = 0;
+
+            for(i=0, nam=full_name_number.length; i<nam; i++){
+                if(full_name_number[i] != 'espaço'){
+                    soma += full_name_number[i];
+                }
+            }
+    
+            function sominha(soma){
+                if(soma > 9){
+                    var myArr = String(soma).split("").map((soma)=>{
+                        return Number(soma)
+                      })
+        
+                    var soma2 = 0
+                    for(i=0, nam=myArr.length; i<nam; i++){
+                        soma2 += myArr[i];
+                    }
+        
+                    soma = soma2
+                    if(soma > 9){
+                        return sominha(soma);
+                    }
+                    else{
+                        soma = `0${soma}`
+    
+                        return soma
+                    }
+                }
+    
+            }
+    
+            for(i=0, nam=full_name_number.length; i<nam;i++){
+                if(full_name_number[i] == 'espaço'){
+                    document.getElementById('nome_completo_number_anima').innerHTML += `<h5 style="background-color: transparent"> </h5>`
+                }
+                else{
+                    if(full_name_number[i] == 0){
+                        document.getElementById('nome_completo_number_anima').innerHTML += `<h5 style="background-color: rgb(141, 120, 0); color: rgb(152 152 152);">${full_name_number[i]}</h5>` 
+                    }
+                    else{
+                        document.getElementById('nome_completo_number_anima').innerHTML += `<h5>${full_name_number[i]}</h5>` 
+                    } 
+                }
+            }
+
+            $('#numeroAlma_do_cliente').text(sominha(soma))
+            $('#email_do_cliente').text(document.getElementById("email_user").value)
+            $('#estadoCivil_do_cliente').text($('.input-estado-civil').attr('value'))
+
+            const genero = $('#genero_do_clinte').text()
+            const estadoCivil = $('#estadoCivil_do_cliente').text()
+
+            $('#audio_principal').attr('src', `media/numeroAlma/${genero}/${estadoCivil}/${sominha(soma)}.mp3`)
+
+            $('#audio_principal track').attr('src', `legendas/numeroAlma/${genero}/${estadoCivil}/${sominha(soma)}.vtt`)
+
+            $('#container1').css('display', 'none');
+            $('#black_bg').css('display', 'block');
+            $('#container2').css('display', 'block');
+        }
+        else{
+            window.alert("Coloque um email funcional");
+        }
+    }
+}
+
 function add_dia(butao){
     $('.input-dia').attr('value', $(butao).text());
 }

@@ -276,7 +276,7 @@ function animation2(){
 
     audio_cour_dois.addEventListener('timeupdate', function exibirLegendas(){
         const tempoAtual_cour_dois = audio_cour_dois.currentTime;
-        if($('numeroAlma_do_cliente').text() == ""){
+        if($('#numeroAlma_do_cliente').text() == ""){
             if(tempoAtual_cour_dois >= 8.0 && tempoAtual_cour_dois <= 8.5){
                 $('#num_dest_anima').animate({
                     opacity: '1'
@@ -356,6 +356,8 @@ function animation2(){
                 $('#container1').css('display', 'block');
                 $('#container2').css('display', 'none');
 
+                $('.cour_dois_gender').css('display', 'none');
+                $('.cour_dois_full_name').css('display', 'none');
                 $('.cour_tres_estadoCivil').css('display', 'block');
                 $('.cour_tres_email').css('display', 'block');
 
@@ -366,6 +368,8 @@ function animation2(){
                 // cour_tres_email
     
                 $('.title-form').text('Preencha o formulário abaixo para continuar');
+
+                $('.butao button').attr('onclick', 'cour_tres()')
             }
         }
     })
