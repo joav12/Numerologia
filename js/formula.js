@@ -268,6 +268,8 @@ function cour_tres(){
                 }
             }
 
+            document.getElementById('nome_completo_anima').innerHTML = ""
+
             for(i=0, nam=full_name.length; i<nam;i++){
                 if(i == 0 || full_name[i - 1] !== 'undefined' && full_name[i - 1] == " "){
                     document.getElementById('nome_completo_anima').innerHTML += `<h5 style="background-color: #0e1b2c; color: rgb(152 152 152);"">${full_name[i].toUpperCase()}</h5>`
@@ -319,7 +321,9 @@ function cour_tres(){
                 }
     
             }
-    
+            
+            document.getElementById('nome_completo_number_anima').innerHTML = ""
+
             for(i=0, nam=full_name_number.length; i<nam;i++){
                 if(full_name_number[i] == 'espaço'){
                     document.getElementById('nome_completo_number_anima').innerHTML += `<h5 style="background-color: transparent"> </h5>`
@@ -338,7 +342,7 @@ function cour_tres(){
             $('#email_do_cliente').text(document.getElementById("email_user").value)
             $('#estadoCivil_do_cliente').text($('.input-estado-civil').attr('value'))
 
-            const genero = $('#genero_do_clinte').text()
+            const genero = $('#genero_do_cliente').text()
             const estadoCivil = $('#estadoCivil_do_cliente').text()
 
             $('#audio_principal').attr('src', `media/numeroAlma/${genero}/${estadoCivil}/${sominha(soma)}.mp3`)
@@ -423,7 +427,6 @@ function playAudio(){
     else if(indica_cour_number == 2){
         return animation3();
     }
-
 }
 
 function mute(){

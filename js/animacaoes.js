@@ -374,3 +374,108 @@ function animation2(){
         }
     })
 }
+
+function animation3(){
+    const audio_cour_tres = document.getElementById('audio_principal');
+
+    audio_cour_tres.addEventListener('timeupdate', function exibirLegendas(){
+        const tempoAtual_cour_tres = audio_cour_tres.currentTime;
+
+        if($('#numeroAlma_do_cliente').text() != ""){
+            if(tempoAtual_cour_tres >= 0.0 && tempoAtual_cour_tres <= 0.5){
+                $('#num_dest_anima').animate({
+                    opacity: '1'
+                }, 600)
+    
+                $('#num_dest_anima h3').text(`Numero da alma de ${$('#nome_do_cliente').text()}`)
+                $('#num_dest_anima img').css('opacity', '0')
+            }
+
+            if(tempoAtual_cour_tres >= 79.0 && tempoAtual_cour_tres <= 79.5){
+                $('#nome_completo_anima').animate({
+                    opacity: '1'
+                }, 600)
+    
+                $('#nome_completo_number_anima').animate({
+                    opacity: '1'
+                }, 600)
+            }
+
+            if(tempoAtual_cour_tres >= 105.0 && tempoAtual_cour_tres <= 105.5){
+                $('#num_dest_anima').animate({
+                    opacity: '0'
+                }, 600)
+
+                $('#nome_completo_anima').animate({
+                    opacity: '0'
+                }, 600)
+    
+                $('#nome_completo_number_anima').animate({
+                    opacity: '0'
+                }, 600)
+            }
+
+            if(tempoAtual_cour_tres >= 107.0 && tempoAtual_cour_tres <= 107.5){
+                $('#calcula_num_dest_anima').animate({
+                    opacity: '1'
+                }, 600)
+    
+                $('#calcula_num_dest_anima h3').text("Seu numero da Alma é:")
+    
+                $('#dia_calcula_card').css('opacity', '0');
+                $('#ano1_calcula_card').css('opacity', '0');
+                $('#ano2_calcula_card').css('opacity', '0');
+    
+                $('#mes_calcula_card').css('margin-right', '-134px');
+                $('#mes_calcula_card .mes1').text('');
+                $('#mes_calcula_card .mes2').text($('#numeroAlma_do_cliente').text());
+                $('#mes_calcula_card .mes2').css('margin-left', '8px');
+                $('#mes_calcula_card .mes2').css('margin-top', '51px');
+            }
+
+            if(tempoAtual_cour_tres >= 412.0 && tempoAtual_cour_tres <= 412.5){
+                $('#calcula_num_dest_anima').animate({
+                    opacity: '0'
+                }, 600)
+            }
+
+            if(tempoAtual_cour_tres >= 414.0 && tempoAtual_cour_tres <= 414.5){
+                $('#primeira_anima img').attr('src', 'img/mandala.gif')
+
+                $('#primeira_anima').animate({
+                    opacity: '1'
+                }, 500)
+            }
+
+            if(tempoAtual_cour_tres >= 459.0 && tempoAtual_cour_tres <= 459.5){
+                $('#primeira_anima').animate({
+                    opacity: '0'
+                }, 500)
+            }
+
+            if(tempoAtual_cour_tres >= 460.0 && tempoAtual_cour_tres <= 460.5){
+                $('#num_dest_anima').animate({
+                    opacity: '1'
+                }, 600)
+    
+                $('#num_dest_anima h3').text(`Seu MAPA DA VIDA`)
+                $('#num_dest_anima img').css('opacity', '1')
+                $('#num_dest_anima img').css('display', 'block')
+
+                $('#num_dest_anima img').attr('src', 'img/mapa-da-vida-grande.png')
+            }
+
+            if(tempoAtual_cour_tres >= 792.0 && tempoAtual_cour_tres <= 792.5){
+                $('#num_dest_anima').animate({
+                    opacity: '0'
+                }, 600)
+            }
+
+            if(tempoAtual_cour_tres >= 792.0 && tempoAtual_cour_tres <= 792.5){
+                $('#container2').css('display', 'none');
+                $('#pagamento').css('display', 'block');
+
+            }
+        }
+    })
+}
