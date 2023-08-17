@@ -397,3 +397,64 @@ header{
 #player a:hover{
     cursor: pointer;
 }
+
+/* Tela de pagamento */
+#pagamento{
+    position: absolute;
+    left: 37%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: #fff;
+    width: 650px;
+    height: 392px;
+    border-radius: 15px;
+}
+
+#pagamento header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 64px;
+    background-color: #1a3254;
+    border-radius: 15px 15px 0px 0px;
+}
+
+#pagamento header p{ color: #ffdb60; }
+
+#pagamento header span{
+    color: #ffdb60; 
+    text-decoration: line-through;
+}
+
+#pagamento header button{
+    border: none;
+    color: white;
+    background-color: #af3589;
+    border-radius: 15px;
+    width: 150px;
+}
+
+#pagamento .content{ padding: 10px; }
+
+#pagamento .content p{
+    color: black;
+}
+
+#pagamento .content .mapa-da-vida-img{
+    float: left;
+    width: 171px;
+    height: 250px;
+    margin-right: 40px;
+}
+
+#pagamento .garantia{
+    width: 119px;
+    height: 110px;
+}
+
+#pagamento .formas-de-pagamento{
+    width: 242px;
+    height: 79px;
+}

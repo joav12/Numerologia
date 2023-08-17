@@ -1,4 +1,4 @@
-var mes_list = ["Janeiro", "Fevereiro", "Março","Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro" , "Outubro", "Novembro", "Dezembro"];
+var mes_list = ["Enero", "Febrero", "Marzo","Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre" , "Octubre", "Noviembre", "Diciembre"];
 
 var n = 0;
 
@@ -6,7 +6,7 @@ const legendasContainer = document.getElementById('legendas_aparecendo');
 
 function cour_um(){
     if(document.getElementById("name_user").value == ""){
-        window.alert("Preencha com o seu nome");
+        window.alert("Completa tu nombre");
     }
     else{
         n += 1;
@@ -14,12 +14,12 @@ function cour_um(){
 
         $('#name_user').css('display', 'none');
 
-        $('#formulario .input p').text("Informe sua data de nascimento");
+        $('#formulario .input p').text("Introduzca su fecha de nacimiento");
 
         $('.input-dropdown').css('display', 'flex');
 
-        if($('.input-dia').attr('value') == "Dia" && n >= 2 || $('.input-mes').attr('value') == "Mês" && n >= 2 || $('.input-ano').attr('value') == "Ano" && n >= 2){
-            window.alert("Por favor informe a sua data de aniversário para continuar");
+        if($('.input-dia').attr('value') == "Dia" && n >= 2 || $('.input-mes').attr('value') == "Mês" && n >= 2 || $('.input-ano').attr('value') == "Año" && n >= 2){
+            window.alert("Por favor ingrese su fecha de nacimiento para continuar");
         }
         else if($('.input-dia').attr('value') != "Dia" && n >= 2 || $('.input-mes').attr('value') != "Mês" && n >= 2 || $('.input-ano').attr('value') != "Ano" && n >= 2){
             var mes = "", output = [], soma = 0;
@@ -118,8 +118,8 @@ function cour_um(){
 }
 
 function cour_dois(){
-    if(document.getElementById("full_name_user").value == "" || $('.input-gender').attr('value') == "Seu gênero"){
-        window.alert("Preencha todos os campos abaixo");
+    if(document.getElementById("full_name_user").value == "" || $('.input-gender').attr('value') == "tu género"){
+        window.alert("Complete todos los campos a continuación");
     }
     else{
         const full_name = document.getElementById("full_name_user").value.toLowerCase().split('');
@@ -230,8 +230,8 @@ function cour_dois(){
 }
 
 function cour_tres(){
-    if(document.getElementById("email_user").value == "" || $('.input-estado-civil').attr('value') == "Seu estado civil"){
-        window.alert("Preencha todos os campos abaixo");
+    if(document.getElementById("email_user").value == "" || $('.input-estado-civil').attr('value') == "tu estado civil"){
+        window.alert("Complete todos los campos a continuación");
     }
     else{
         if(document.getElementById("email_user").value.includes('@')){
@@ -460,7 +460,8 @@ function pause(){
         $('#black_bg #name_black_bg').css('color', 'gold').css('font-size', '2.5rem')
 
         $('#black_bg img').attr('src','img/stop.png')
-        $('#black_bg .paragrafo').text("Essa é a sua última chance de assistir até o final")
+        $('#black_bg .paragrafo').text("Esta es tu última oportunidad de ver hasta el final.")
+        $('#black_bg button').text("CONTINUAR")
 
         ta_pausado = true
     }
