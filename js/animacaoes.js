@@ -195,7 +195,7 @@ function animation1(){
             }
 
             if(tempoAtual_cour_um >= 117.0 && tempoAtual_cour_um <= 117.5){
-                $('#calcula_num_dest_anima').animate({
+                $('#calcula_num_dest_anima').css('margin-bottom', '150px').animate({
                     opacity: '1'
                 }, 600)
 
@@ -276,7 +276,7 @@ function animation2(){
 
     audio_cour_dois.addEventListener('timeupdate', function exibirLegendas(){
         const tempoAtual_cour_dois = audio_cour_dois.currentTime;
-        if($('#numeroAlma_do_cliente').text() == ""){
+        if($('#numeroAlma_do_cliente').text() == "" && document.getElementById("full_name_user").value != ""){
             if(tempoAtual_cour_dois >= 8.0 && tempoAtual_cour_dois <= 8.5){
                 $('#num_dest_anima').animate({
                     opacity: '1'

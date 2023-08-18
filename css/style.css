@@ -3,8 +3,8 @@
 }
 
 html{
-    overflow: hidden;
-}
+    overflow-x:hidden 
+  } 
 
 body{
     background-image: url('../img/bg1.png');
@@ -366,7 +366,7 @@ header{
     display: flex;
     width: 90%;
     background: #1a3254;
-    height: 100px;
+    height: 128px;
     border-radius: 35px;
     top: -852px;
 }
@@ -457,4 +457,54 @@ header{
 #pagamento .formas-de-pagamento{
     width: 242px;
     height: 79px;
+}
+
+/* celular */
+@media screen and (max-width: 390px){
+    #apresentacao p{ inline-size: 366px; }
+
+    #formulario{ width: 356px; }
+
+    #formulario .input input { width: 285px; }
+
+    #formulario .butao button { width: 315px; }
+
+    #formulario .input-dropdown { flex-direction: column; }
+
+    #formulario .input-dropdown .input-mes { width: 131px; }
+
+    #formulario .input-mes, #formulario .input-ano, #formulario .input-dia{ margin-bottom: 10px; }
+
+    #container2{ width: 380px; }
+
+    #player{ height: 173px; top: -947px;}
+
+    .legends{ min-width: 200px; }
+
+    .divider_bunito { height: 130px; margin-right: 20px;}
+
+    #black_bg .paragrafo { inline-size: 312px; }
+
+    #paragrafo1_animate_sep { left: 15px;}
+
+    #paragrafo2_animate_sep {
+        left: 175px;
+        inline-size: 210px;
+        overflow-wrap: break-word;
+        text-align: center;
+    }
+
+    #numeros_cards_anima { top: -389px; left: 32px; flex-wrap: wrap;}
+
+    #numeros_cards_anima img { width: 82px; height: 159px; margin-bottom: 10px;}
+
+    .calcula_num_dest_anima_flex { flex-wrap: wrap; margin-left: 50px; }
+
+    #dia_calcula_card, #mes_calcula_card, #ano1_calcula_card, #ano2_calcula_card { background-size: 84px; width: 78px; height: 132px; }
+
+    #calcula_num_dest_anima { top: -1021px; }
+
+    #dia_calcula_card, #mes_calcula_card, #ano1_calcula_card, #ano2_calcula_card { margin-bottom: 10px; }
+
+    #primeira_anima img{ width: 400px; height: 210px; }
 }
