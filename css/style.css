@@ -3,7 +3,7 @@
 }
 
 html{
-    overflow-x:hidden 
+    overflow:hidden 
   } 
 
 body{
@@ -500,11 +500,15 @@ header{
 
     .calcula_num_dest_anima_flex { flex-wrap: wrap; margin-left: 50px; }
 
-    #dia_calcula_card, #mes_calcula_card, #ano1_calcula_card, #ano2_calcula_card { background-size: 84px; width: 78px; height: 132px; }
+    #dia_calcula_card, #mes_calcula_card, #ano1_calcula_card, #ano2_calcula_card { background-size: 84px; width: 84px; height: 132px; }
 
     #calcula_num_dest_anima { top: -1021px; }
 
     #dia_calcula_card, #mes_calcula_card, #ano1_calcula_card, #ano2_calcula_card { margin-bottom: 10px; }
 
-    #primeira_anima img{ width: 400px; height: 210px; }
+    #nome_completo_anima, #nome_completo_number_anima { top: -1359px; flex-wrap: wrap; }
+
+    #pagamento { left: 3%; width: 372px; height: 542px; }
+
+    #pagamento .selos { display: flex; }
 }

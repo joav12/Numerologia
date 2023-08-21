@@ -201,11 +201,11 @@ function animation1(){
 
                 $('#calcula_num_dest_anima h3').text("Seu numero do destino é:")
 
-                $('#dia_calcula_card').css('opacity', '0');
-                $('#ano1_calcula_card').css('opacity', '0');
-                $('#ano2_calcula_card').css('opacity', '0');
+                $('#dia_calcula_card').css('display', 'none');
+                $('#ano1_calcula_card').css('display', 'none');
+                $('#ano2_calcula_card').css('display', 'none');
 
-                $('#mes_calcula_card').css('margin-right', '-134px');
+              
                 $('#mes_calcula_card .mes1').text('');
                 $('#mes_calcula_card .mes2').text($('#numero_do_cliente').text());
                 $('#mes_calcula_card .mes2').css('margin-left', '8px');
@@ -234,9 +234,13 @@ function animation1(){
             }
 
             if(tempoAtual_cour_um >= 209.0 && tempoAtual_cour_um <= 209.5){
-                $('#primeira_anima img').attr('src', 'img/tabela.png')
+                $('#primeira_anima img').attr('src', 'img/tabela.png').css('width', '400px').css('height', '210px')
                 $('#primeira_anima h3').css('color', 'rgba(255, 217, 0, 0)')
                 
+                if( $(window).width() <= 390){
+                    $('#primeira_anima img').css('width', '400px').css('height', '210px')
+                }
+
                 $('#primeira_anima').animate({
                     opacity: '1'
                 }, 500)
@@ -277,6 +281,12 @@ function animation2(){
     audio_cour_dois.addEventListener('timeupdate', function exibirLegendas(){
         const tempoAtual_cour_dois = audio_cour_dois.currentTime;
         if($('#numeroAlma_do_cliente').text() == "" && document.getElementById("full_name_user").value != ""){
+            if( $(window).width() <= 390){
+                $('#player').css('top', '-1234px')
+            }else{
+              $('#player').css('top', '-1084px')  
+            }
+
             if(tempoAtual_cour_dois >= 8.0 && tempoAtual_cour_dois <= 8.5){
                 $('#num_dest_anima').animate({
                     opacity: '1'
@@ -313,17 +323,16 @@ function animation2(){
             }
     
             if(tempoAtual_cour_dois >= 58.0 && tempoAtual_cour_dois <= 58.5){
-                $('#calcula_num_dest_anima').animate({
+                $('#calcula_num_dest_anima').css('margin-bottom', '150px').animate({
                     opacity: '1'
                 }, 600)
     
                 $('#calcula_num_dest_anima h3').text("Seu numero de Expressão é:")
     
-                $('#dia_calcula_card').css('opacity', '0');
-                $('#ano1_calcula_card').css('opacity', '0');
-                $('#ano2_calcula_card').css('opacity', '0');
+                $('#dia_calcula_card').css('display', 'none');
+                $('#ano1_calcula_card').css('display', 'none');
+                $('#ano2_calcula_card').css('display', 'none');
     
-                $('#mes_calcula_card').css('margin-right', '-134px');
                 $('#mes_calcula_card .mes1').text('');
                 $('#mes_calcula_card .mes2').text($('#numeroExp_do_cliente').text());
                 $('#mes_calcula_card .mes2').css('margin-left', '8px');
@@ -416,17 +425,16 @@ function animation3(){
             }
 
             if(tempoAtual_cour_tres >= 107.0 && tempoAtual_cour_tres <= 107.5){
-                $('#calcula_num_dest_anima').animate({
+                $('#calcula_num_dest_anima').css('margin-bottom', '150px').animate({
                     opacity: '1'
                 }, 600)
     
                 $('#calcula_num_dest_anima h3').text("Seu numero da Alma é:")
     
-                $('#dia_calcula_card').css('opacity', '0');
-                $('#ano1_calcula_card').css('opacity', '0');
-                $('#ano2_calcula_card').css('opacity', '0');
+                $('#dia_calcula_card').css('display', 'none');
+                $('#ano1_calcula_card').css('display', 'none');
+                $('#ano2_calcula_card').css('display', 'none');
     
-                $('#mes_calcula_card').css('margin-right', '-134px');
                 $('#mes_calcula_card .mes1').text('');
                 $('#mes_calcula_card .mes2').text($('#numeroAlma_do_cliente').text());
                 $('#mes_calcula_card .mes2').css('margin-left', '8px');
@@ -441,6 +449,10 @@ function animation3(){
 
             if(tempoAtual_cour_tres >= 414.0 && tempoAtual_cour_tres <= 414.5){
                 $('#primeira_anima img').attr('src', 'img/mandala.gif')
+
+                if( $(window).width() <= 390){
+                    $('#primeira_anima img').css('width', '227px').css('height', '210px')
+                }
 
                 $('#primeira_anima').animate({
                     opacity: '1'
