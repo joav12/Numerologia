@@ -4,7 +4,7 @@
 
 html{
     overflow:hidden 
-  } 
+} 
 
 body{
     background-image: url('../img/bg1.png');
@@ -428,13 +428,18 @@ header{
     text-decoration: line-through;
 }
 
-#pagamento header button{
+#pagamento header a{
+    text-align: center;
+    text-decoration: none;
     border: none;
     color: white;
     background-color: #af3589;
     border-radius: 15px;
     width: 150px;
+    transition: all 0.2s ease-in;
 }
+
+#pagamento header a:hover{ cursor: pointer;  background-color: #702257;}
 
 #pagamento .content{ padding: 10px; }
 
@@ -461,6 +466,8 @@ header{
 
 /* celular */
 @media screen and (max-width: 414px){
+    html{ overflow-y: hidden; overflow-x: visible; } 
+
     #apresentacao p{ inline-size: 366px; }
 
     #formulario{ width: 356px; }
