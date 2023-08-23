@@ -384,11 +384,11 @@ function playAudio(){
     $('#black_bg').css('display', 'none');
 
     document.getElementById("audio_fundo").loop = true;
-    document.getElementById("audio_fundo").volume = 0.2;
+    document.getElementById("audio_fundo").volume = 0.1;
     document.getElementById("audio_fundo").play();
 
     document.getElementById("audio_principal").loop = false;
-    document.getElementById("audio_principal").volume = 0.5;
+    document.getElementById("audio_principal").volume = 0.7;
     document.getElementById("audio_principal").play();
 
     $('#player .pausar span').text("pause")
