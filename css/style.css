@@ -460,7 +460,7 @@ header{
 }
 
 /* celular */
-@media screen and (max-width: 390px){
+@media screen and (max-width: 414px){
     #apresentacao p{ inline-size: 366px; }
 
     #formulario{ width: 356px; }
@@ -508,7 +508,11 @@ header{
 
     #nome_completo_anima, #nome_completo_number_anima { top: -1359px; flex-wrap: wrap; }
 
-    #pagamento { left: 3%; width: 372px; height: 542px; }
+    #pagamento { left: 3%; width: 372px; height: 481px; }
 
-    #pagamento .selos { display: flex; }
+    #pagamento .content { margin-bottom: 10px; }
+
+    #pagamento .selos { padding: 10px;}
+
+    #pagamento .selos img { margin-bottom: 5px; }
 }

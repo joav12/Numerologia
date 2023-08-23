@@ -10,47 +10,47 @@ function animation1(){
                 }, 500)
             }
             
-            if(tempoAtual_cour_um >= 5.0 && tempoAtual_cour_um <= 5.5){
+            if(tempoAtual_cour_um >= 3.0 && tempoAtual_cour_um <= 3.5){
                 $('#paragrafo1_animate_sep').text('Numerologia').animate({
                     opacity: '1',
                     top: '40px'
                 }, 600)
             } 
 
-            if(tempoAtual_cour_um >= 9.0 && tempoAtual_cour_um <= 9.5){
-                $('#paragrafo2_animate_sep').text('Profundamente Reveladora!').animate({
+            if(tempoAtual_cour_um >= 5.0 && tempoAtual_cour_um <= 5.5){
+                $('#paragrafo2_animate_sep').text('¡Profundamente revelador!').animate({
                     opacity: '1',
                     top: '0px'
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 20.0 && tempoAtual_cour_um <= 20.5){
-                $('#paragrafo1_animate_sep').text('Numerologia').animate({
+            if(tempoAtual_cour_um >= 14.0 && tempoAtual_cour_um <= 14.5){
+                $('#paragrafo1_animate_sep').animate({
                     opacity: '0',
                     top: '0px'
                 }, 600)
 
-                $('#paragrafo2_animate_sep').text('Profundamente Reveladora!').animate({
+                $('#paragrafo2_animate_sep').animate({
                     opacity: '0',
                     top: '-34px'
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 23.0 && tempoAtual_cour_um <= 23.5){
-                $('#paragrafo1_animate_sep').text('Tomar Decisões').animate({
+            if(tempoAtual_cour_um >= 16.0 && tempoAtual_cour_um <= 16.5){
+                $('#paragrafo1_animate_sep').text('Tomar decisiones').animate({
                     opacity: '1',
                     top: '40px'
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 27.0 && tempoAtual_cour_um <= 27.5){
+            if(tempoAtual_cour_um >= 18.0 && tempoAtual_cour_um <= 18.5){
                 $('#paragrafo2_animate_sep').text('Oportunidades Únicas').animate({
                     opacity: '1',
                     top: '0px'
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 40.0 && tempoAtual_cour_um <= 40.5){
+            if(tempoAtual_cour_um >= 24.0 && tempoAtual_cour_um <= 24.5){
                 $('#primeira_anima').animate({
                     opacity: '0'
                 }, 600)
@@ -66,89 +66,89 @@ function animation1(){
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 47.0 && tempoAtual_cour_um <= 47.5){
+            if(tempoAtual_cour_um >= 32.0 && tempoAtual_cour_um <= 32.5){
                 $('#num_destino_card_anima').animate({
                     opacity: '1'
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 48.0 && tempoAtual_cour_um <= 48.5){
+            if(tempoAtual_cour_um >= 33.0 && tempoAtual_cour_um <= 33.5){
                 $('#num_nasc_card_anima').animate({
+                    opacity: '1'
+                }, 600)
+            }
+
+            if(tempoAtual_cour_um >= 34.0 && tempoAtual_cour_um <= 34.5){
+                $('#num_alma_card_anima').animate({
+                    opacity: '1'
+                }, 600)
+            }
+
+            if(tempoAtual_cour_um >= 35.0 && tempoAtual_cour_um <= 35.5){
+                $('#num_exprecao_card_anima').animate({
+                    opacity: '1'
+                }, 600)
+            }
+
+            if(tempoAtual_cour_um >= 37.0 && tempoAtual_cour_um <= 37.5){
+                $('#num_personalidade_card_anima').animate({
+                    opacity: '1'
+                }, 600)
+            }
+
+            if(tempoAtual_cour_um >= 39.0 && tempoAtual_cour_um <= 39.5){
+                $('#num_destino_card_anima').animate({
+                    opacity: '0'
+                }, 600)
+
+                $('#num_nasc_card_anima').animate({
+                    opacity: '0'
+                }, 600)
+
+                $('#num_alma_card_anima').animate({
+                    opacity: '0'
+                }, 600)
+
+                $('#num_exprecao_card_anima').animate({
+                    opacity: '0'
+                }, 600)
+
+                $('#num_personalidade_card_anima').animate({
+                    opacity: '0'
+                }, 600)
+            }
+
+            if(tempoAtual_cour_um >= 42.0 && tempoAtual_cour_um <= 42.5){
+                $('#paragrafo1_animate').animate({
+                    opacity: '1'
+                }, 600)
+            }
+
+            if(tempoAtual_cour_um >= 43.0 && tempoAtual_cour_um <= 43.5){
+                $('#paragrafo2_animate').animate({
+                    opacity: '1'
+                }, 600)
+            }
+
+            if(tempoAtual_cour_um >= 44.0 && tempoAtual_cour_um <= 44.5){
+                $('#paragrafo3_animate').animate({
+                    opacity: '1'
+                }, 600)
+            }
+
+            if(tempoAtual_cour_um >= 46.0 && tempoAtual_cour_um <= 46.5){
+                $('#paragrafo4_animate').animate({
                     opacity: '1'
                 }, 600)
             }
 
             if(tempoAtual_cour_um >= 49.0 && tempoAtual_cour_um <= 49.5){
-                $('#num_alma_card_anima').animate({
-                    opacity: '1'
-                }, 600)
-            }
-
-            if(tempoAtual_cour_um >= 50.0 && tempoAtual_cour_um <= 50.5){
-                $('#num_exprecao_card_anima').animate({
-                    opacity: '1'
-                }, 600)
-            }
-
-            if(tempoAtual_cour_um >= 52.0 && tempoAtual_cour_um <= 52.5){
-                $('#num_personalidade_card_anima').animate({
-                    opacity: '1'
-                }, 600)
-            }
-
-            if(tempoAtual_cour_um >= 55.0 && tempoAtual_cour_um <= 55.5){
-                $('#num_destino_card_anima').animate({
-                    opacity: '0'
-                }, 600)
-
-                $('#num_nasc_card_anima').animate({
-                    opacity: '0'
-                }, 600)
-
-                $('#num_alma_card_anima').animate({
-                    opacity: '0'
-                }, 600)
-
-                $('#num_exprecao_card_anima').animate({
-                    opacity: '0'
-                }, 600)
-
-                $('#num_personalidade_card_anima').animate({
-                    opacity: '0'
-                }, 600)
-            }
-
-            if(tempoAtual_cour_um >= 61.0 && tempoAtual_cour_um <= 61.5){
-                $('#paragrafo1_animate').animate({
-                    opacity: '1'
-                }, 600)
-            }
-
-            if(tempoAtual_cour_um >= 62.0 && tempoAtual_cour_um <= 62.5){
-                $('#paragrafo2_animate').animate({
-                    opacity: '1'
-                }, 600)
-            }
-
-            if(tempoAtual_cour_um >= 64.0 && tempoAtual_cour_um <= 64.5){
-                $('#paragrafo3_animate').animate({
-                    opacity: '1'
-                }, 600)
-            }
-
-            if(tempoAtual_cour_um >= 67.0 && tempoAtual_cour_um <= 67.5){
-                $('#paragrafo4_animate').animate({
-                    opacity: '1'
-                }, 600)
-            }
-
-            if(tempoAtual_cour_um >= 70.0 && tempoAtual_cour_um <= 70.5){
                 $('#paragrafo5_animate').animate({
                     opacity: '1'
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 75.0 && tempoAtual_cour_um <= 75.5){
+            if(tempoAtual_cour_um >= 53.0 && tempoAtual_cour_um <= 53.5){
                 $('#paragrafo1_animate').animate({
                     opacity: '0'
                 }, 600)
@@ -170,36 +170,36 @@ function animation1(){
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 81.0 && tempoAtual_cour_um <= 81.5){
+            if(tempoAtual_cour_um >= 56.0 && tempoAtual_cour_um <= 56.5){
                 $('#num_dest_anima').animate({
                     opacity: '1'
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 84.0 && tempoAtual_cour_um <= 84.5){
+            if(tempoAtual_cour_um >= 58.0 && tempoAtual_cour_um <= 58.5){
                 $('#num_dest_anima').animate({
                     opacity: '0'
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 85.0 && tempoAtual_cour_um <= 85.5){
+            if(tempoAtual_cour_um >= 59.0 && tempoAtual_cour_um <= 59.5){
                 $('#calcula_num_dest_anima').animate({
                     opacity: '1'
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 115.0 && tempoAtual_cour_um <= 115.5){
+            if(tempoAtual_cour_um >= 77.0 && tempoAtual_cour_um <= 77.5){
                 $('#calcula_num_dest_anima').animate({
                     opacity: '0'
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 117.0 && tempoAtual_cour_um <= 117.5){
+            if(tempoAtual_cour_um >= 80.0 && tempoAtual_cour_um <= 80.5){
                 $('#calcula_num_dest_anima').css('margin-bottom', '150px').animate({
                     opacity: '1'
                 }, 600)
 
-                $('#calcula_num_dest_anima h3').text("Seu numero do destino é:")
+                $('#calcula_num_dest_anima h3').text("Su número de destino es:")
 
                 $('#dia_calcula_card').css('display', 'none');
                 $('#ano1_calcula_card').css('display', 'none');
@@ -212,28 +212,28 @@ function animation1(){
                 $('#mes_calcula_card .mes2').css('margin-top', '51px');
             }
 
-            if(tempoAtual_cour_um >= 178.0 && tempoAtual_cour_um <= 178.5){
+            if(tempoAtual_cour_um >= 120.0 && tempoAtual_cour_um <= 120.5){
                 $('#calcula_num_dest_anima').animate({
                     opacity: '0'
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 179.0 && tempoAtual_cour_um <= 179.5){
+            if(tempoAtual_cour_um >= 122.0 && tempoAtual_cour_um <= 122.5){
                 $('#num_dest_anima').animate({
                     opacity: '1'
                 }, 600)
 
-                $('#num_dest_anima h3').text("Numero de Expresão")
+                $('#num_dest_anima h3').text("Número de expresión")
                 $('#num_dest_anima img').attr('src', 'img/card-numero-expressao.png')
             }
 
-            if(tempoAtual_cour_um >= 207.0 && tempoAtual_cour_um <= 207.5){
+            if(tempoAtual_cour_um >= 147.0 && tempoAtual_cour_um <= 147.5){
                 $('#num_dest_anima').animate({
                     opacity: '0'
                 }, 600)
             }
 
-            if(tempoAtual_cour_um >= 209.0 && tempoAtual_cour_um <= 209.5){
+            if(tempoAtual_cour_um >= 150.0 && tempoAtual_cour_um <= 150.5){
                 $('#primeira_anima img').attr('src', 'img/tabela.png').css('width', '400px').css('height', '210px')
                 $('#primeira_anima h3').css('color', 'rgba(255, 217, 0, 0)')
                 
@@ -247,17 +247,17 @@ function animation1(){
                 
             }
 
-            if(tempoAtual_cour_um >= 247.0 && tempoAtual_cour_um <= 247.5){
+            if(tempoAtual_cour_um >= 173.0 && tempoAtual_cour_um <= 173.5){
                 $('#primeira_anima').animate({
                     opacity: '0'
                 }, 500)
             }
 
-            if(tempoAtual_cour_um >= 249.0 && tempoAtual_cour_um <= 249.5){
+            if(tempoAtual_cour_um >= 174.0 && tempoAtual_cour_um <= 174.5){
                 $('#container1').css('display', 'block');
                 $('#container2').css('display', 'none');
 
-                $('.title-form').text('Preencha o formulário abaixo para continuar');
+                $('.title-form').text('Complete el siguiente formulario para continuar.');
 
                 $('.input-dropdown').css('display', 'none');
                 $('.cour_dois_gender').css('display', 'block');
@@ -281,28 +281,28 @@ function animation2(){
     audio_cour_dois.addEventListener('timeupdate', function exibirLegendas(){
         const tempoAtual_cour_dois = audio_cour_dois.currentTime;
         if($('#numeroAlma_do_cliente').text() == "" && document.getElementById("full_name_user").value != ""){
-            if( $(window).width() <= 390){
+            if( $(window).width() <= 414){
                 $('#player').css('top', '-1234px')
             }else{
               $('#player').css('top', '-1084px')  
             }
 
-            if(tempoAtual_cour_dois >= 8.0 && tempoAtual_cour_dois <= 8.5){
+            if(tempoAtual_cour_dois >= 6.0 && tempoAtual_cour_dois <= 6.5){
                 $('#num_dest_anima').animate({
                     opacity: '1'
                 }, 600)
     
-                $('#num_dest_anima h3').text("Numero de Expresão")
+                $('#num_dest_anima h3').text("Número de expresión")
                 $('#num_dest_anima img').attr('src', 'img/card-numero-expressao.png')
             }
     
-            if(tempoAtual_cour_dois >= 36.0 && tempoAtual_cour_dois <= 36.5){
+            if(tempoAtual_cour_dois >= 34.0 && tempoAtual_cour_dois <= 34.5){
                 $('#num_dest_anima').animate({
                     opacity: '0'
                 }, 600)
             }
     
-            if(tempoAtual_cour_dois >= 38.0 && tempoAtual_cour_dois <= 38.5){
+            if(tempoAtual_cour_dois >= 36.0 && tempoAtual_cour_dois <= 36.5){
                 $('#nome_completo_anima').animate({
                     opacity: '1'
                 }, 600)
@@ -312,7 +312,7 @@ function animation2(){
                 }, 600)
             }
     
-            if(tempoAtual_cour_dois >= 56.0 && tempoAtual_cour_dois <= 56.5){
+            if(tempoAtual_cour_dois >= 48.0 && tempoAtual_cour_dois <= 48.5){
                 $('#nome_completo_anima').animate({
                     opacity: '0'
                 }, 600)
@@ -322,12 +322,12 @@ function animation2(){
                 }, 600)
             }
     
-            if(tempoAtual_cour_dois >= 58.0 && tempoAtual_cour_dois <= 58.5){
-                $('#calcula_num_dest_anima').css('margin-bottom', '150px').animate({
+            if(tempoAtual_cour_dois >= 52.0 && tempoAtual_cour_dois <= 52.5){
+                $('#calcula_num_dest_anima').animate({
                     opacity: '1'
                 }, 600)
     
-                $('#calcula_num_dest_anima h3').text("Seu numero de Expressão é:")
+                $('#calcula_num_dest_anima h3').text("Su número de expresión es:")
     
                 $('#dia_calcula_card').css('display', 'none');
                 $('#ano1_calcula_card').css('display', 'none');
@@ -335,33 +335,31 @@ function animation2(){
     
                 $('#mes_calcula_card .mes1').text('');
                 $('#mes_calcula_card .mes2').text($('#numeroExp_do_cliente').text());
-                $('#mes_calcula_card .mes2').css('margin-left', '8px');
-                $('#mes_calcula_card .mes2').css('margin-top', '51px');
             }
     
-            if(tempoAtual_cour_dois >= 132.0 && tempoAtual_cour_dois <= 132.5){
+            if(tempoAtual_cour_dois >= 118.0 && tempoAtual_cour_dois <= 118.5){
                 $('#calcula_num_dest_anima').animate({
                     opacity: '0'
                 }, 600)
             }
     
-            if(tempoAtual_cour_dois >= 147.0 && tempoAtual_cour_dois <= 147.5){
+            if(tempoAtual_cour_dois >= 124.0 && tempoAtual_cour_dois <= 124.5){
                 $('#num_dest_anima').animate({
                     opacity: '1'
                 }, 600)
     
-                $('#num_dest_anima h3').text("Numero da alma")
+                $('#num_dest_anima h3').text("numero de alma")
     
                 $('#num_dest_anima img').attr('src', 'img/card-numero-alma.png')
             }
     
-            if(tempoAtual_cour_dois >= 184.0 && tempoAtual_cour_dois <= 184.5){
+            if(tempoAtual_cour_dois >= 155.0 && tempoAtual_cour_dois <= 155.5){
                 $('#num_dest_anima').animate({
                     opacity: '0'
                 }, 600)
             }
     
-            if(tempoAtual_cour_dois >= 187.0 && tempoAtual_cour_dois <= 187.5){
+            if(tempoAtual_cour_dois >= 159.0 && tempoAtual_cour_dois <= 159.5){
                 $('#container1').css('display', 'block');
                 $('#container2').css('display', 'none');
 
@@ -370,13 +368,13 @@ function animation2(){
                 $('.cour_tres_estadoCivil').css('display', 'block');
                 $('.cour_tres_email').css('display', 'block');
 
-                $('.cour_tres_estadoCivil p').text('Informe o seu estado civil');
-                $('.cour_tres_email p').text('Informe o seu email');
+                $('.cour_tres_estadoCivil p').text('Informa tu estado civil');
+                $('.cour_tres_email p').text('Informa a tu correo electrónico');
 
                 // cour_tres_estadoCivil
                 // cour_tres_email
     
-                $('.title-form').text('Preencha o formulário abaixo para continuar');
+                $('.title-form').text('Complete el siguiente formulario para continuar.');
 
                 $('.butao button').attr('onclick', 'cour_tres()')
             }
@@ -389,18 +387,17 @@ function animation3(){
 
     audio_cour_tres.addEventListener('timeupdate', function exibirLegendas(){
         const tempoAtual_cour_tres = audio_cour_tres.currentTime;
-
         if($('#numeroAlma_do_cliente').text() != ""){
             if(tempoAtual_cour_tres >= 0.0 && tempoAtual_cour_tres <= 0.5){
                 $('#num_dest_anima').animate({
                     opacity: '1'
                 }, 600)
     
-                $('#num_dest_anima h3').text(`Numero da alma de ${$('#nome_do_cliente').text()}`)
+                $('#num_dest_anima h3').text(`Numero de alma de ${$('#nome_do_cliente').text()}`)
                 $('#num_dest_anima img').css('opacity', '0')
             }
 
-            if(tempoAtual_cour_tres >= 79.0 && tempoAtual_cour_tres <= 79.5){
+            if(tempoAtual_cour_tres >= 65.0 && tempoAtual_cour_tres <= 65.5){
                 $('#nome_completo_anima').animate({
                     opacity: '1'
                 }, 600)
@@ -410,7 +407,7 @@ function animation3(){
                 }, 600)
             }
 
-            if(tempoAtual_cour_tres >= 105.0 && tempoAtual_cour_tres <= 105.5){
+            if(tempoAtual_cour_tres >= 86.0 && tempoAtual_cour_tres <= 86.5){
                 $('#num_dest_anima').animate({
                     opacity: '0'
                 }, 600)
@@ -424,12 +421,12 @@ function animation3(){
                 }, 600)
             }
 
-            if(tempoAtual_cour_tres >= 107.0 && tempoAtual_cour_tres <= 107.5){
-                $('#calcula_num_dest_anima').css('margin-bottom', '150px').animate({
+            if(tempoAtual_cour_tres >= 89.0 && tempoAtual_cour_tres <= 89.5){
+                $('#calcula_num_dest_anima').animate({
                     opacity: '1'
                 }, 600)
     
-                $('#calcula_num_dest_anima h3').text("Seu numero da Alma é:")
+                $('#calcula_num_dest_anima h3').text("Su numero de Alma es:")
     
                 $('#dia_calcula_card').css('display', 'none');
                 $('#ano1_calcula_card').css('display', 'none');
@@ -437,17 +434,15 @@ function animation3(){
     
                 $('#mes_calcula_card .mes1').text('');
                 $('#mes_calcula_card .mes2').text($('#numeroAlma_do_cliente').text());
-                $('#mes_calcula_card .mes2').css('margin-left', '8px');
-                $('#mes_calcula_card .mes2').css('margin-top', '51px');
             }
 
-            if(tempoAtual_cour_tres >= 412.0 && tempoAtual_cour_tres <= 412.5){
+            if(tempoAtual_cour_tres >= 376.0 && tempoAtual_cour_tres <= 376.5){
                 $('#calcula_num_dest_anima').animate({
                     opacity: '0'
                 }, 600)
             }
 
-            if(tempoAtual_cour_tres >= 414.0 && tempoAtual_cour_tres <= 414.5){
+            if(tempoAtual_cour_tres >= 378.0 && tempoAtual_cour_tres <= 378.5){
                 $('#primeira_anima img').attr('src', 'img/mandala.gif')
 
                 if( $(window).width() <= 390){
@@ -459,31 +454,31 @@ function animation3(){
                 }, 500)
             }
 
-            if(tempoAtual_cour_tres >= 459.0 && tempoAtual_cour_tres <= 459.5){
+            if(tempoAtual_cour_tres >= 466.0 && tempoAtual_cour_tres <= 466.5){
                 $('#primeira_anima').animate({
                     opacity: '0'
                 }, 500)
             }
 
-            if(tempoAtual_cour_tres >= 460.0 && tempoAtual_cour_tres <= 460.5){
+            if(tempoAtual_cour_tres >= 468.0 && tempoAtual_cour_tres <= 468.5){
                 $('#num_dest_anima').animate({
                     opacity: '1'
                 }, 600)
     
-                $('#num_dest_anima h3').text(`Seu MAPA DA VIDA`)
+                $('#num_dest_anima h3').text(`Su MAPA DE VIDA`)
                 $('#num_dest_anima img').css('opacity', '1')
                 $('#num_dest_anima img').css('display', 'block')
 
                 $('#num_dest_anima img').attr('src', 'img/mapa-da-vida-grande.png')
             }
 
-            if(tempoAtual_cour_tres >= 792.0 && tempoAtual_cour_tres <= 792.5){
+            if(tempoAtual_cour_tres >= 550.0 && tempoAtual_cour_tres <= 550.5){
                 $('#num_dest_anima').animate({
                     opacity: '0'
                 }, 600)
             }
 
-            if(tempoAtual_cour_tres >= 792.0 && tempoAtual_cour_tres <= 792.5){
+            if(tempoAtual_cour_tres >= 552.0 && tempoAtual_cour_tres <= 552.5){
                 $('#container2').css('display', 'none');
                 $('#pagamento').css('display', 'block');
 
