@@ -35,11 +35,11 @@
     <script src="js/animacaoes.js" defer></script>
 </head>
 <body>
-    <p id="nome_do_cliente" style="display: none;"></p>
+    <p id="nome_do_cliente" style="display: none;">João Victor</p>
     <p id="aniversário_do_cliente" style="display: none;"></p>
-    <p id="numero_do_cliente" style="display: none;"></p>
-    <p id="genero_do_cliente" style="display: none;"></p>
-    <p id="numeroExp_do_cliente" style="display: none;"></p>
+    <p id="numero_do_cliente" style="display: none;">01</p>
+    <p id="genero_do_cliente" style="display: none;">masculino</p>
+    <p id="numeroExp_do_cliente" style="display: none;">01</p>
     <p id="numeroAlma_do_cliente" style="display: none;"></p>
     <p id="email_do_cliente" style="display: none;"></p>
     <p id="estadoCivil_do_cliente" style="display: none;"></p>
@@ -78,7 +78,7 @@
         <div id="formulario">
             <p class="title-form">Ingrese sus datos a continuación para recibir su Análisis Numerológico (100% gratis)</p>
 
-            <div class="input cour_tres_estadoCivil" style="display: none;">
+            <div class="input cour_tres_estadoCivil">
                 <p>Informa tu estado civil</p>
                 <div class="dropdown">
                     <input type="text" class="btn btn-secondary dropdown-toggle input-estado-civil" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" value="tu estado civil" readonly>
@@ -93,7 +93,7 @@
                 </div>
             </div>
 
-            <div class="input cour_tres_email" style="display: none;">
+            <div class="input cour_tres_email">
                 <p>Informar a su correo electrónico</p>
                 <input type="email" name="email_user" id="email_user" placeholder="Informar a su correo electrónico">
             </div>
@@ -116,7 +116,7 @@
                 <input type="text" name="full_name_user" id="full_name_user" placeholder="Ingresa tu nombre completo">
             </div>
 
-            <div class="input" >
+            <div class="input" style="display: none;">
                 <p class="input-p">
                     Ponga su primer nombre</p>
                 <input type="text" name="name_user" id="name_user" placeholder="Ponga su primer nombre">
@@ -338,7 +338,7 @@
             </div>
 
             <div class="butao">
-                <button onclick="cour_um()">Clic aquí para continuar</button>
+                <button onclick="cour_tres()">Clic aquí para continuar</button>
             </div>
         </div>
     </div>

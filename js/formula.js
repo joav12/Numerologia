@@ -297,7 +297,7 @@ function cour_tres(){
                     soma += full_name_number[i];
                 }
             }
-    
+
             function sominha(soma){
                 if(soma > 9){
                     var myArr = String(soma).split("").map((soma)=>{
