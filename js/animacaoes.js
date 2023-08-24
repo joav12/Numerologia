@@ -234,7 +234,7 @@ function animation1(){
             }
 
             if(tempoAtual_cour_um >= 150.0 && tempoAtual_cour_um <= 150.5){
-                $('#primeira_anima img').attr('src', 'img/tabela.png').css('width', '400px').css('height', '210px')
+                $('#primeira_anima img').attr('src', 'img/tabela.png').css('width', '302px').css('height', '210px')
                 $('#primeira_anima h3').css('color', 'rgba(255, 217, 0, 0)')
                 
                 if( $(window).width() <= 390){
