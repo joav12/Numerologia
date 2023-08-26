@@ -263,8 +263,8 @@ function animation1(){
                 $('.cour_dois_gender').css('display', 'block');
                 $('.cour_dois_full_name').css('display', 'block');
 
-                $('.cour_dois_gender p').text('Informe o seu genero');
-                $('.cour_dois_full_name p').text('Informe o seu primeiro nome');
+                $('.cour_dois_gender p').text('Dinos tu género');
+                $('.cour_dois_full_name p').text('Ingresa tu nombre completo');
 
                 $('.input-p').text('');
 
@@ -348,7 +348,7 @@ function animation2(){
                     opacity: '1'
                 }, 600)
     
-                $('#num_dest_anima h3').text("numero de alma")
+                $('#num_dest_anima h3').text("numero del alma")
     
                 $('#num_dest_anima img').attr('src', 'img/card-numero-alma.png')
             }
@@ -393,7 +393,7 @@ function animation3(){
                     opacity: '1'
                 }, 600)
     
-                $('#num_dest_anima h3').text(`Numero de alma de ${$('#nome_do_cliente').text()}`)
+                $('#num_dest_anima h3').text(`Numero del alma de ${$('#nome_do_cliente').text()}`)
                 $('#num_dest_anima img').css('opacity', '0')
             }
 
@@ -465,7 +465,7 @@ function animation3(){
                     opacity: '1'
                 }, 600)
     
-                $('#num_dest_anima h3').text(`Su MAPA DE VIDA`)
+                $('#num_dest_anima h3').text(`Su MAPA DE LA VIDA`)
                 $('#num_dest_anima img').css('opacity', '1')
                 $('#num_dest_anima img').css('display', 'block')
 

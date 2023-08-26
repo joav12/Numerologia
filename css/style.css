@@ -344,6 +344,7 @@ header{
     justify-content: center;
     position: relative;
     top: -1209px;
+    flex-wrap: wrap;
     opacity: 0;
 }
 
