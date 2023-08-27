@@ -3,7 +3,7 @@
 }
 
 html{
-    overflow:hidden 
+    overflow:hidden;
 } 
 
 body{
@@ -468,6 +468,8 @@ header{
 /* celular */
 @media screen and (max-width: 414px){
     html{ overflow: visible; } 
+
+    #black_bg { height: 116%; }
 
     #apresentacao{ padding: 20px; margin: 0px; }
 

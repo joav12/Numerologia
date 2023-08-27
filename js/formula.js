@@ -83,6 +83,11 @@ function cour_um(){
                 soma = "0" + soma;
             }
             
+            if( $(window).width() <= 414){
+                $('html').css('overflow', 'hidden')
+                $('html').css('overflow-x', 'visible')
+            }
+
             $('#audio_principal').attr('src', `media/numeroDestino/${soma}.mp3`)
             $('#audio_principal track').attr('src', `legendas/numeroDestino/${soma}.vtt`)
 
