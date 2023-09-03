@@ -281,7 +281,7 @@ function animation2(){
     audio_cour_dois.addEventListener('timeupdate', function exibirLegendas(){
         const tempoAtual_cour_dois = audio_cour_dois.currentTime;
         if($('#numeroAlma_do_cliente').text() == "" && document.getElementById("full_name_user").value != ""){
-            if( $(window).width() <= 414){
+            if( $(window).width() <= 450){
                 $('#player').css('top', '-1234px')
             }else{
               $('#player').css('top', '-1084px')  
@@ -389,7 +389,7 @@ function animation3(){
     audio_cour_tres.addEventListener('timeupdate', function exibirLegendas(){
         const tempoAtual_cour_tres = audio_cour_tres.currentTime;
         if($('#numeroAlma_do_cliente').text() != ""){
-            if( $(window).width() <= 414){
+            if( $(window).width() <= 450){
                 $('#player').css('top', '-1271px')
             }else{
               $('#player').css('top', '-1084px')  

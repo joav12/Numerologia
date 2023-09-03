@@ -466,7 +466,7 @@ header{
 }
 
 /* celular */
-@media screen and (max-width: 414px){
+@media screen and (max-width: 450px){
     html{ overflow: visible; } 
 
     #black_bg { height: 116%; }

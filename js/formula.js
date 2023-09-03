@@ -392,7 +392,7 @@ function playAudio(){
 
     document.getElementById("audio_principal").loop = false;
 
-    if( $(window).width() <= 414){
+    if( $(window).width() <= 450){
         document.getElementById("audio_fundo").volume = 0.01;
         document.getElementById("audio_principal").volume = 0.5;
     }else{
