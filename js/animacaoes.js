@@ -238,7 +238,7 @@ function animation1(){
                 $('#primeira_anima h3').css('color', 'rgba(255, 217, 0, 0)')
                 
                 if( $(window).width() <= 390){
-                    $('#primeira_anima img').css('width', '400px').css('height', '210px')
+                    $('#primeira_anima img').css('width', '317px').css('height', '221px')
                 }
 
                 $('#primeira_anima').animate({
@@ -277,7 +277,7 @@ function animation1(){
 
 function animation2(){
     const audio_cour_dois = document.getElementById('audio_principal');
-
+    
     audio_cour_dois.addEventListener('timeupdate', function exibirLegendas(){
         const tempoAtual_cour_dois = audio_cour_dois.currentTime;
         if($('#numeroAlma_do_cliente').text() == "" && document.getElementById("full_name_user").value != ""){
@@ -286,6 +286,7 @@ function animation2(){
             }else{
               $('#player').css('top', '-1084px')  
             }
+        
 
             if(tempoAtual_cour_dois >= 6.0 && tempoAtual_cour_dois <= 6.5){
                 $('#num_dest_anima').animate({
@@ -388,6 +389,12 @@ function animation3(){
     audio_cour_tres.addEventListener('timeupdate', function exibirLegendas(){
         const tempoAtual_cour_tres = audio_cour_tres.currentTime;
         if($('#numeroAlma_do_cliente').text() != ""){
+            if( $(window).width() <= 414){
+                $('#player').css('top', '-1271px')
+            }else{
+              $('#player').css('top', '-1084px')  
+            }
+
             if(tempoAtual_cour_tres >= 0.0 && tempoAtual_cour_tres <= 0.5){
                 $('#num_dest_anima').animate({
                     opacity: '1'

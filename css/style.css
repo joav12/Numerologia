@@ -500,7 +500,7 @@ header{
 
     #animation_canvas{ margin: 0; height: 442px}
 
-    #player{ height: 173px; top: -964px; width: 306px; margin: 0;}
+    #player{ height: 173px; top: -948px; width: 306px; margin: 0;}
 
     .legends{ min-width: 167px; }
 
@@ -539,7 +539,9 @@ header{
 
     #nome_completo_anima, #nome_completo_number_anima { top: -1359px; flex-wrap: wrap; }
 
-    #pagamento { left: 3%; width: 300px;; height: 481px; }
+    #pagamento { left: 3%; top: 20%; width: 300px; height: 481px; }
+
+    #pagamento header p{ font-size: 0.8rem; }
 
     #pagamento .content { margin-bottom: 10px; }
 

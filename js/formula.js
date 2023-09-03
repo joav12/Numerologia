@@ -389,11 +389,18 @@ function playAudio(){
     $('#black_bg').css('display', 'none');
 
     document.getElementById("audio_fundo").loop = true;
-    document.getElementById("audio_fundo").volume = 0.1;
-    document.getElementById("audio_fundo").play();
 
     document.getElementById("audio_principal").loop = false;
-    document.getElementById("audio_principal").volume = 0.7;
+
+    if( $(window).width() <= 414){
+        document.getElementById("audio_fundo").volume = 0.01;
+        document.getElementById("audio_principal").volume = 0.5;
+    }else{
+        document.getElementById("audio_fundo").volume = 0.07;
+        document.getElementById("audio_principal").volume = 0.5;
+    }
+
+    document.getElementById("audio_fundo").play();
     document.getElementById("audio_principal").play();
 
     $('#player .pausar span').text("pause")
@@ -414,7 +421,7 @@ function playAudio(){
                     numero_legal++
                 }
                 
-                if(legendasContainer.innerHTML !== legenda.text && numero_legal == 0 || legendasContainer.innerHTML !== legenda.text && numero_legal == 7){
+                if(legendasContainer.innerHTML !== legenda.text && numero_legal == 0 || legendasContainer.innerHTML !== legenda.text && numero_legal == 6){
                     legendasContainer.innerHTML = legenda.text
                 }            
             }
