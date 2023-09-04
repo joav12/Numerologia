@@ -406,7 +406,6 @@ header{
     top: 30%;
     display: flex;
     flex-direction: column;
-    align-self: center;
     background-color: #fff;
     width: 650px;
     height: 392px;
@@ -556,4 +555,8 @@ header{
     #pagamento .formas-de-pagamento { width: 158px; height: 63px; }
 
     #pagamento .selos img { margin-bottom: 5px; }
+}
+
+@media screen and (min-width: 420px){
+    #pagamento { left: 15%; }
 }
